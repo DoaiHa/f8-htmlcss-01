@@ -1,0 +1,603 @@
+*{
+    box-sizing: border-box;
+    /* tac dong vaao tat ca phan tu */
+}
+/* ctrl+D  boi den nhieu tu */
+:root{
+    --primary-color: #0F1B4C;
+}
+html{
+    font-size: 62,5%;
+    /* lam co chu nho */
+    scroll-behavior: smooth;
+    /* hanh vi cuon muot ma   */
+}
+body{
+    font-size: 1.6rem;
+    /* de co chu quay lai binh thuong */
+    font-family: "Poppins" ;
+    scroll-behavior: smooth;
+}
+/* conmonn dung chungg */
+.content{
+    width: 1100px;
+    /* chieu dai hien thi la 1100px */
+    max-width: calc(100% - 48px);
+    /* chiều dài là 100% khi thu nhỏ lại dưới 1100px sẽ cách trái phải mỗi bên 24px */
+    margin-left: auto;
+    margin-right: auto;
+}
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    /* gioi han 2 dong */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    /* bo gach chan tat ca the a */
+}
+.btn{
+    display: inline-block;
+    padding: 18px 16px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    min-width: 98px;
+    /* chieu dai nho nhat96px    */
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: normal;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+.fixt-header{
+    background: #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+.hero-wrap{
+    padding-top: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #E6F0FF;
+    height: 100vh;
+    /* chieucao */
+}
+.navbar{
+    display: flex;
+    /* de cac phan tu nam ngang */
+    align-items: center;
+    /* de cac phan tu nam tren 1 duong thang */
+    padding: 6px  0px 12px  0;
+}
+.navbar ul{
+    display: flex;
+    margin-left: 50px;
+    /* day sang phai 50px */
+}
+.navbar .action{
+    margin-left: auto;
+    /* di chuyen sang ben phai */
+}
+.navbar ul a{
+    color: #4F5361;
+    font-size: 1.4rem;
+    /* co chu */
+    font-weight: 500;
+    /* kieu dang chu   */
+    padding: 8px 14px;
+    /* chieu cao phan tu */
+}
+.navbar ul a:hover{
+    text-decoration: underline;
+    opacity: 0.9;
+}
+.navbar .action .action-link{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+}
+.navbar .action-btn{
+    padding: 13px 16px;
+    margin-left: 18px;
+}
+/* =====hero====== */
+.hero .info{
+    width: 51%;
+    justify-content: center;
+}
+.hero .sub-title{
+    color: #687690;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+.hero .title{
+    margin-top: 8px;
+    color: #000336;
+    font-size: 4.7rem;
+    font-weight: 700;
+    line-height: 1.19;
+}
+.hero .desc{
+    margin-top: 30px;
+    color: #5A6473;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.78; /* 177.778% */
+    text-transform: capitalize;
+    /* viet hoa chu cai dau   */
+}
+.hero .hero-cta{
+    min-width: 170px;
+    padding: 15px 37px;
+    margin-top: 40px;
+}
+.hero-img{
+    position: absolute;
+    right: calc((100vw - 1100px ) / 2 - 100px);
+    bottom: 0px;
+    /* width: 584px;
+    height: 619px; */
+}
+    /* ======CLIENT======== */
+.clients{
+    margin-top: 160px;
+    padding: 43px 0 64px;
+}
+
+.clients .row{
+    display: flex;
+    justify-content: space-between;
+    /* day phan tu xa nhau nhat co the    */
+}
+.clients .row .desc{
+    margin-top: 23px;
+    color: #7D8589;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+}
+.clients .images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* can giua theo chieu ngang */
+    margin-top: 70px;
+}
+.clients .images a{
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    height: 90px;
+    border-radius: 12px;
+}
+.duides{
+    padding: 80px 0;
+    margin-top: 40px;
+}
+.duides .sub-title{
+    position: relative;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    color:#000339;
+
+}
+.duides .desc{
+    margin: 20px auto 0;
+    /* trai phai bang auto de can giua */
+    width: 459px;
+    max-width: 100%;
+    /* bang 100% cua 459px */
+    color: #5A6473;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.88; /* 187.5% */
+}
+.duides .sub-title::before{
+    position: absolute;
+    top: -10px;
+    /* -10 cua chinh no   */
+    left: 50%;
+    /* bat dau giua trang */
+    transform: translateX(-50%);
+    /* bang 50% cua chinh no */
+    content: "";
+    /* rong   */
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    background-color: #000339;
+    border-radius: 12px;
+}
+.list-guide{
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    /* can tat ca ra giua  */
+}
+.guide-item{
+    margin: 0 70px;
+    text-align: center;
+}
+.guide-item .title{
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    color: #4F5361;
+}
+.guide-item .link{
+    display: inline-block;
+    margin-top: 26px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #0F1B4C;
+}
+.guide-item .arrow{
+    margin-left: 6px;
+}
+.guide-cta{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.guide-cta .btn{
+    border-radius: 12px;
+}
+/* =========featured========= */
+
+
+.featured{
+    margin-top: 40px;
+    padding:  110px 0;
+    background: #F5FAFE;
+}
+.featured .sub-title{
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: #000339;
+}
+.featured .row{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.featured .desc{
+    color: #5A6473;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4; /* 187.5% */
+}
+.featured .link{
+    display: flex;
+    align-items: center;
+    color: #0689FF;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.featured .link .arrow{
+    margin-left: 8px;
+}
+.featured .list{
+    gap: 30px;
+    /* tao khoag cah giua item 30px */
+    display: flex;
+    margin-top: 70px;
+}
+.featured .item{
+    flex: 1;
+    /* chia chieu dai cua the div la 1 */
+    background-color: #FFF;
+    border-radius: 12px;
+}
+.featured .item .thumb{
+    width: 100%;
+    /* anh nam tron trong chieu dai with 100% */
+    height: 350px;
+    /* chieu cao anh   */
+    object-fit: cover;
+    /* anh nam tron trong khung anh da duoc css  */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    /* bo goc trai va phai cua hinh anh   */
+}
+.featured .item .body{
+    padding: 17px 20px 24px;
+}
+.featured .item .title a{
+    --line-clamp: 1;
+    /* thu gon chu con 1 dong dinh vcl   */
+    color: #000339;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5; /* 100% */
+    /* khoang cach giua cac chu    */
+    
+}
+.featured .item .desc{
+    margin-top: 10px;
+    color: #A3A6AB;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    word-break: break-all;
+    /* cham den nguong se xuong dong  */
+    
+}
+.featured .item .info{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+}
+.featured .item .label{
+    color: #4D4D52;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+    letter-spacing: 0.01em;
+}
+.featured .item .icon{
+    margin-left: 10px;
+}
+.featured .item .icon:first-child{
+    margin-left: 0px;
+}
+
+/* =====stats========== */
+.stats {
+    margin-top: 70px;
+    padding: 50px 0;
+}
+.stats .row{
+    display: flex;
+}
+.stats .content{
+    width: 1048px;
+}
+.stats .img-block,
+.stats .info {
+    width: 50%;
+    /* lấy khối của img  chia cho diện tích 1048px bằng 50% ==> khối img bằng 50% */
+}
+.stats .img-block{
+    position: relative;
+}
+.stats .img-block .image{
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    /* hien thi anh khong bi meo dung voi kich thuoc da dat   */
+    border-radius: 12px;
+    margin-left: auto;
+    /* chi day sang tan cung ben phai khi display=block */
+    display: block;
+}
+.stats .info{
+    padding: 70px 0 0 165px;
+}
+.stats .sub-title{
+    position: relative;
+    width: 280px;
+    /* chieu dai cua the h3   */
+    color: #000339;
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 1.2; /* 128.571% */
+}
+.stats .info .desc{
+    width: 309px;
+    margin-top: 20px;
+    color: #5A6473;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4; /* 187.5% */
+}
+.stats .sub-title::before{
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+    display: block;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+}
+.stats .stats-trend{
+    position: absolute;
+    padding: 35px 22px 40px;
+    top: 0;
+    left: 0;
+    width: 239px;
+    background-color: #4F5361;
+    border-radius: 0px 0px 12px 12px;
+    background: #FFF;
+    box-shadow: 90px 85px 100px 0px rgba(0, 0, 0, 0.06);
+}
+
+.stats .stats-trend .value{
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+
+}
+.stats .stats-trend .img-trend{
+    margin-left: auto;
+}
+.stats .stats-trend .desc{
+    color: #A7A7A7;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5; /* 150% */
+}
+.stats .stats-trend .separate{
+    margin-top: 26px;
+    height: 2px;
+    background: #E9E9E9;
+}
+.stats .avatar-block{
+    margin-top: 26px;
+    flex-wrap: wrap;
+    /* cham den danh gioi se xuong hang   */
+    display: flex;
+    gap: 14px 16px;
+    /* ngang14 tren duoi16  */
+}
+.stats .avatar-group{
+    display: flex;
+}
+.stats .avatar{
+    width: 16px;
+    height: 16px;
+    margin-left: -4px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.avatar-one{
+    background: #4F5361;
+    text-align: center;
+    color: #FFF;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 1.6;
+    letter-spacing: -0.145em;
+}
+.row-qty{
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+.row-qty .qty{
+    color: #000;
+    font-size: 5.2rem;
+    font-weight: 600;
+}
+.row-qty .qty-desc{
+    margin-top: 24px;
+    color: #7B8087;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+/* =====subscription======= */
+.subscription{
+    margin-top: 70px;
+}
+.subscription .body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    border-radius: 20px;
+    background: #063183;
+}
+.subscription .body .info{
+    padding: 0 80px;
+    width: 671px;
+    max-width: 100%;
+}
+.subscription .sub-title{
+    color: #FFF;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.5; /* 100% */
+}
+.subscription .desc{
+    margin-top: 15px;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1; /* 187.5% */
+    opacity: 0.75;
+}
+.subscription .btn{
+    min-width: 151px;
+    margin-top: 20px;
+    background: #FFF;
+    color: #002366;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.subscription .image{
+    position: absolute;
+    bottom: 0;
+    right: 221px;
+}
+/* =========footer=========== */
+.footer{
+    margin-top: 55px;
+    padding: 50px 58px;
+}
+.footer .row{
+    display: flex;
+    
+}
+.footer .row-top{
+    gap: 185px;
+}
+.footer .heading{
+    color: #1C1C1D;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.footer .list,
+footer .desc 
+ {
+    padding-top: 42px;
+}
+.footer .item{
+    margin-top: 18px;
+}
+.footer .item:first-child{
+    margin-top: 0;
+}
+.footer .item a,
+.footer .desc{
+    color: #7A7A7E;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    white-space: nowrap;
+    /* khong bi xuong hang nua */
+}
+.footer .desc{
+    white-space: normal;
+    line-height: 1.4;
+
+}
+.footer .row-logo{
+    margin-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .copyright{
+    color: #C2C2C2;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
